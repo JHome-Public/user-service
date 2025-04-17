@@ -1,0 +1,93 @@
+= User API Documentation
+Author <cube1477@gmail.com>
+
+== Overview
+This document provides the API reference for the User-Service of JHome.
+
+== API
+
+=== Join User (`/api/users`)
+This endpoint allows you to create a new user.
+
+==== Request
+include::{snippets}/join-success/http-request.adoc[]
+include::{snippets}/join-success/request-fields.adoc[]
+
+==== Response
+include::{snippets}/join-success/http-response.adoc[]
+include::{snippets}/join-success/response-fields.adoc[]
+
+==== Failure Cases - Request Arguments Invalid
+include::{snippets}/join-fail-args-invalid/http-response.adoc[]
+include::{snippets}/join-fail-args-invalid/response-fields.adoc[]
+
+==== Failure Cases - User Already Exists
+include::{snippets}/join-fail-already-exist/http-response.adoc[]
+include::{snippets}/join-fail-already-exist/response-fields.adoc[]
+
+'''
+
+
+=== User List (`/api/users`)
+This endpoint allows you to retrieve a list of users.
+
+==== Request
+include::{snippets}/get-list-success/http-request.adoc[]
+include::{snippets}/get-list-success/query-parameters.adoc[]
+
+
+==== Response
+include::{snippets}/get-list-success/http-response.adoc[]
+include::{snippets}/get-list-success/response-fields.adoc[]
+
+'''
+
+=== User Detail (`/api/users/+{username}+`)
+This endpoint allows you to retrieve a user's details.
+
+==== Request
+include::{snippets}/get-detail-success/http-request.adoc[]
+include::{snippets}/get-detail-success/path-parameters.adoc[]
+
+==== Response
+include::{snippets}/get-detail-success/http-response.adoc[]
+include::{snippets}/get-detail-success/response-fields.adoc[]
+
+==== Failure Cases
+include::{snippets}/get-detail-fail-not-found/http-response.adoc[]
+include::{snippets}/get-detail-fail-not-found/response-fields.adoc[]
+
+'''
+
+=== Edit User (`/api/users/+{username}+`)
+This endpoint allows you to update a user's information.
+
+==== Request
+include::{snippets}/edit-success/http-request.adoc[]
+include::{snippets}/edit-success/path-parameters.adoc[]
+include::{snippets}/edit-success/request-fields.adoc[]
+
+==== Response
+include::{snippets}/edit-success/http-response.adoc[]
+include::{snippets}/edit-success/response-fields.adoc[]
+
+==== Failure Cases
+include::{snippets}/get-detail-fail-not-found/http-response.adoc[]
+include::{snippets}/get-detail-fail-not-found/response-fields.adoc[]
+
+'''
+
+=== Delete User (`/api/users/+{username}+`)
+This endpoint allows you to deactivate a user.
+
+==== Request
+include::{snippets}/leave-success/http-request.adoc[]
+include::{snippets}/leave-success/path-parameters.adoc[]
+
+==== Response
+include::{snippets}/leave-success/http-response.adoc[]
+include::{snippets}/leave-success/response-fields.adoc[]
+
+==== Failure Cases
+include::{snippets}/get-detail-fail-not-found/http-response.adoc[]
+include::{snippets}/get-detail-fail-not-found/response-fields.adoc[]
